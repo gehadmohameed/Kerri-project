@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+:root
+{
+    --main-color:#e65f78;
+}
+body
+{
+    font-family: 'Nunito Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    all: unset;
+    cursor: pointer;
+}
+ul
+{
+    list-style-type: none;
+}
+/* Navbar */
+.navbar-nav .nav-link.active
+{
+    color: var(--main-color);
+}
+
+.navbar .nav-link:hover 
+{
+    color: var(--main-color);
+}
+/* Home */
+#home
+{
+    background-image: url("../images/header-bg.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+.home-content p 
+{
+    color: rgba(255, 255, 255, 0.75);
+}
+.download-btn
+{
+    padding:15px 30px ;
+    border: solid 1px white;   
+    /* transition:background-color 1s,color 1s ; */
+    transition: all 1s;
+}
+.download-btn:hover 
+{
+    background-color: white;
+    color: black;
+}
+.setting-icon
+{
+    top: 30%;
+    border-radius:0 5px 5px 0 ;
+}
+.mouse
+{
+    display: inline-block;
+    width: 30px;
+    height: 50px;
+    border: solid 1px white;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    border-radius: 15px;
+    transform: translateX(-50%);
+    animation: upDown 1s linear  infinite;
+    
+}
+.mouse::after
+{
+    content: " ";
+    width: 3px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@keyframes upDown {
+    0%{
+        bottom: 30px;
+    }
+    50%{
+        bottom: 60px;
+    }
+    100%{
+        bottom: 30px;
+    }
+    
+}
+.up-icon
+{
+    background-color: var(--main-color);
+    position: fixed;
+    right: 2%;
+    bottom: 3%;
+    border-radius: 5px;
+}
+.home-content h1::after
+{
+    content: " |";
+    animation:typing  3s linear  infinite ;
+}
+@keyframes typing {
+    0%{content: "D |";}
+    5%{content: "De |";}
+    10%{content: "Des |";}
+    15%{content: "Desi |";}
+    20%{content: "Desig |";}
+    25%{content: "Design |";}
+    30%{content: "Designe |";}
+    35%{content: "Designer |";}
+    40%{content: "Designe |";}
+    45%{content: "Design |";}
+    50%{content: "Desig |";}
+    55%{content: "Desi |";}
+    50%{content: "Des |";}
+    55%{content: "De |";}
+    60%{content: "D |";}
+    65%{content: "|";}
+}
+/* Services */
+.service-item
+{
+    border:1px solid #e8e8e8;
+    border-radius: 5px;
+}
+.service-item i 
+{
+    color: var(--main-color);
+}
+.service-item h5::after
+{
+    content: " ";
+    width: 50px;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: width 1s;
+}
+.service-item:hover h5::after
+{
+    width: 100px;
+}
+/* Client */
+.client-item i 
+{
+    color: var(--main-color);
+}
+.carousel-indicators [data-bs-target] 
+{
+    width: 20px;
+    height: 5px;
+    border: solid 1px var(--main-color);
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+.carousel-indicators [data-bs-target].active
+{
+    width: 25px;
+    height: 7px;
+}
+/* Work */
+.nav-pills .nav-link.active
+{
+    background-color: var(--main-color);
+    border-radius: 20px;
+}
+.nav-pills .nav-link 
+{
+    color: black;
+    border-radius: 20px;
+}
+.nav-pills .nav-link:hover
+{
+    background-color: var(--main-color);
+    border-radius: 20px;
+    color: white;
+}
+/* Work */
+.work-item .layer
+{
+    opacity: 0;
+    transition: opacity 1s;
+}
+.work-item:hover .layer
+{
+    opacity: 1;
+}
+.work-item:hover .work-text
+{
+    top: 0 !important;
+}
+.work-item .work-text
+{
+    transition:top 1s ;
+}
+.work-item:hover img 
+{
+    transform: scale(1.1);
+}
+.work-item img 
+{
+    transition: transform 1s;
+}
